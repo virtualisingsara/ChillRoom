@@ -2807,7 +2807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f478be926f53e3844910d62bc06566dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToLookAt: {fileID: 2081162702}
+  objectToLookAt: {fileID: 1751600198222639662}
 --- !u!1 &978269998
 GameObject:
   m_ObjectHideFlags: 0
@@ -4692,6 +4692,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 439274, guid: 0ef57641c76718c468cf5f4cacc42feb, type: 3}
   m_PrefabInstance: {fileID: 1804448751}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1810506305 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2994175315895362393, guid: dd0f436a098ebb2419ce08c04176433e, type: 3}
+  m_PrefabInstance: {fileID: 1751600198222639661}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1851256413
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5813,7 +5818,7 @@ MonoBehaviour:
   cat2: {fileID: 0}
   cat3: {fileID: 0}
   toy: {fileID: 1751600198222639662}
-  target: {fileID: 2081162704}
+  target: {fileID: 1810506305}
 --- !u!54 &1751600198222639665
 Rigidbody:
   m_ObjectHideFlags: 0

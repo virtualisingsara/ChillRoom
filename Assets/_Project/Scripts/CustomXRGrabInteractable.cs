@@ -14,6 +14,7 @@ public class CustomXRGrabInteractable : XRGrabInteractable
     [SerializeField] private Transform target; // Target to follow
     Vector3 initialPos = new Vector3(1.66f, 0.62f, 4.233f);
     Quaternion initialRot = new Quaternion(0, -0.537196338f, 0, 0.843457282f);
+    Vector3 catPos;
 
     void Start()
     {
@@ -40,6 +41,7 @@ public class CustomXRGrabInteractable : XRGrabInteractable
         if (isDirectInteractor)
         {
             cat1.GetComponent<ObjectLooker>().enabled = false;
+            
         }
 
         toy.transform.position = initialPos;
@@ -56,8 +58,9 @@ public class CustomXRGrabInteractable : XRGrabInteractable
 
         //Revisar
 
-            cat1.GetComponent<Animation>().Play("Walk");
-            cat1.transform.DOMove(target.position, 2);
+        cat1.GetComponent<Animation>().Play("Walk");
+        catPos = new Vector3(target.position.x, 0, target.position.z);
+        cat1.transform.DOMove(catPos, 4);
       }
 
 }
