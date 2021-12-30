@@ -9,9 +9,9 @@ public class CustomXRGrabInteractable : XRGrabInteractable
     AudioSource audioData;
     [SerializeField] private GameObject cat1;
     [SerializeField] private GameObject cat2;
-    [SerializeField] private GameObject cat3;
     [SerializeField] private GameObject toy;
-    [SerializeField] private Transform target; // Target to follow
+    [SerializeField] private Transform target1;
+    [SerializeField] private Transform target2;
     Vector3 initialPos = new Vector3(1.66f, 0.62f, 4.233f);
     Quaternion initialRot = new Quaternion(0, -0.537196338f, 0, 0.843457282f);
     Vector3 catPos;
@@ -29,6 +29,7 @@ public class CustomXRGrabInteractable : XRGrabInteractable
         if (isDirectInteractor)
         {
             cat1.GetComponent<ObjectLooker>().enabled = true;
+            cat2.GetComponent<ObjectLooker>().enabled = true;
         }
 
     }
@@ -41,7 +42,7 @@ public class CustomXRGrabInteractable : XRGrabInteractable
         if (isDirectInteractor)
         {
             cat1.GetComponent<ObjectLooker>().enabled = false;
-            
+            cat2.GetComponent<ObjectLooker>().enabled = false;
         }
 
         toy.transform.position = initialPos;
@@ -55,12 +56,17 @@ public class CustomXRGrabInteractable : XRGrabInteractable
         audioData.Play(0);
 
         cat1.GetComponent<AudioSource>().Play();
+        cat2.GetComponent<AudioSource>().Play();
 
         //Revisar
 
         cat1.GetComponent<Animation>().Play("Walk");
-        catPos = new Vector3(target.position.x, 0, target.position.z);
+        catPos = new Vector3(target1.position.x, 0, target1.position.z);
         cat1.transform.DOMove(catPos, 4);
-      }
+
+        cat2.GetComponent<Animation>().Play("Walk");
+        catPos = new Vector3(target2.position.x, 0, target2.position.z);
+        cat2.transform.DOMove(catPos, 4);
+    }
 
 }

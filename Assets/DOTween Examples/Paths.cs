@@ -4,7 +4,7 @@ using DG.Tweening;
 
 public class Paths : MonoBehaviour
 {
-	[SerializeField, Range(2, 15)] private int reverseSpeed = 10;
+	[SerializeField, Range(8, 20)] private int reverseSpeed = 14;
 	public Transform target;
 	public PathType pathType = PathType.CatmullRom;
 	public Vector3[] waypoints = new[] {
