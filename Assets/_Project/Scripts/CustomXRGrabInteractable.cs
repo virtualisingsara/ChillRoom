@@ -62,11 +62,17 @@ public class CustomXRGrabInteractable : XRGrabInteractable
 
         cat1.GetComponent<Animation>().Play("Walk");
         catPos = new Vector3(target1.position.x, 0, target1.position.z);
-        cat1.transform.DOMove(catPos, 4);
+        cat1.transform.DOMove(catPos, Random.Range(2f, 6f)).OnComplete(() =>
+        {
+            cat1.GetComponent<Animation>().Play("Idle01");
+        });
 
         cat2.GetComponent<Animation>().Play("Walk");
         catPos = new Vector3(target2.position.x, 0, target2.position.z);
-        cat2.transform.DOMove(catPos, 4);
+        cat2.transform.DOMove(catPos, Random.Range(2f, 6f)).OnComplete(() =>
+        {
+            cat2.GetComponent<Animation>().Play("Idle01");
+        });
     }
 
 }
