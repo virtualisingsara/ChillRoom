@@ -58,8 +58,6 @@ public class CustomXRGrabInteractable : XRGrabInteractable
         cat1.GetComponent<AudioSource>().Play();
         cat2.GetComponent<AudioSource>().Play();
 
-        //Revisar
-
         cat1.GetComponent<Animation>().Play("Walk");
         catPos = new Vector3(target1.position.x, 0, target1.position.z);
         cat1.transform.DOMove(catPos, Random.Range(2f, 6f)).OnComplete(() =>
